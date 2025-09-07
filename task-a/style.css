@@ -1,0 +1,31 @@
+/*
+Author: Roland Eklund
+Date: 2025-09-04 
+*/
+body {
+  background-color: black;
+  padding: 5%;
+  padding-left : 10%;
+  padding-right : 10%;
+
+}
+
+div {
+  background-color: #1a1b26;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font: 45px Garamond, serif; 
+  color: #bb9af7
+}
+
+p {
+  font: 15px Garamond,serif;
+  color: #a9b1d6;
+}
+a{
+  color: #7dcfff
+}
