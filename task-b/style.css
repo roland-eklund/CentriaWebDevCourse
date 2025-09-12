@@ -1,0 +1,63 @@
+/*
+Author: Roland Eklund
+Date: 2025-09-12
+*/
+
+body {
+    background-color: #A7C4BC;
+    padding: 5px;
+}
+
+hr {
+    background-color: #A7C4BC;
+    height: 1px;
+    border: none;
+}
+
+h1 {
+    color: #6C8EAD;
+    font-size:50px;
+    font-family: "Poiret One";
+    text-align: center;
+}
+
+h2 {
+    color: #6C8EAD;
+    font-size: x-large;
+    font-family: "Poiret One";
+}
+
+
+li {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    font-size: small;
+    list-style-position: inside;
+}
+
+ul{
+    list-style: circle;
+}
+ol{
+    list-style: upper-roman;
+}
+
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+a{
+    color: #6C8EAD;
+}
+
+div{
+    width: 400px;
+    height: 90cqh;
+    margin: auto;
+    background-color: #F5F7FA;
+    border-color: #333333;
+    padding: 10px;
+    border-radius: 10px;
+
+}
