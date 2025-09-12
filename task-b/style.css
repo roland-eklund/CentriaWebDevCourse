@@ -51,6 +51,23 @@ a{
     color: #6C8EAD;
 }
 
+.button{
+    position: relative;
+    left: 130px;
+    top: 40px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #6C8EAD;
+    color: #F5F7FA;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+
+}
+
 div{
     width: 400px;
     height: 90cqh;
