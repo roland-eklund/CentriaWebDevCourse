@@ -30,14 +30,14 @@ body {
   width: 100%;
 }
 
-.image-section img{
+.content-section img{
   margin-top: 40px;
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
 }
 
-.audio-section {
+.content-section {
   margin-top: 40px;
   background-color: #333;
   width: 100%;
@@ -46,19 +46,14 @@ body {
   padding: 20px;
 }
 
-.video-section {
-  margin-top: 40px;
-  background-color: #333;
+video{
   width: 100%;
-  max-width: 500px;
   border-radius: 10px;
-  padding: 20px;
 }
 
 .info-section {
   margin-top: 40px;
   max-width: 500px;
-  background: darkslategray;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
