@@ -1,0 +1,59 @@
+/* 
+Author: Roland Eklund
+Date: 2025-10-04
+*/
+body {
+  font-family: Tahoma;
+  background-color: #0d1117;
+  color: #c9d1d9; 
+  margin: 0;
+  padding: 0;
+}
+
+.container-one,
+.container-two {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #161b22;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+  color: #58a6ff;
+  margin-bottom: 10px;
+}
+
+#special-message {
+  font-style: italic;
+  border-left: 4px solid #58a6ff;
+  padding: 2px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a[target="_blank"] {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container-two ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+img[src="/task-d/1-68b6dd8b4501c__700.jpg"] {
+  max-width: 500px;
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
