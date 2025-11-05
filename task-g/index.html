@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <!--
+    Author: Roland Eklund
+    Date: 2025-11-05
+    -->
+
+    <header class="site-header">
+      <h1>Registration page</h1>
+    </header>
+
+    <main class="content">
+      <!-- Top row split into two blocks -->
+      <div class="top-grid">
+        <!-- Student info (30%) -->
+        <section class="student-info" aria-label="Student information">
+          <h2 class="student-info-title">Latest added:</h2>
+          <p><span class="student-name">Name</span></p>
+          <p><span class="student-date">Date</span></p>
+          <p><span class="student-email">Email</span></p>
+          <p><span class="student-phone">Phone</span></p>
+          <p><span class="student-dob">Date of Birth</span></p>
+        </section>
+
+        <!-- Controls (70%): add course + day marks -->
+        <section class="controls" aria-label="Add course row">
+          <h2 class="controls-title">Register here:</h2>
+
+          <form id="registrationForm">
+            <!--  Timestamp  -->
+            <input type="hidden" id="timestamp" name="timestamp" />
+            <!--  name  -->
+            <div class="form-row">
+              <label for="nameField">Name</label>
+              <input
+                id="nameField"
+                name="nameField"
+                type="text"
+                required
+                placeholder="e.g., John Doe"
+              />
+            </div>
+            <!--  email  -->
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                pattern="[^ @]*@[^ @]*"
+                required
+                placeholder="john.doe@email.com"
+              />
+            </div>
+            <!--  phone  -->
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="+358 40 1234567"
+              />
+            </div>
+
+            <!--  birth-->
+            <div class="form-row">
+              <label for="birthDate">Date of birth</label>
+              <input id="birthDate" name="birthDate" type="date" required />
+            </div>
+
+            <!--  terms and conditions  -->
+            <fieldset class="questions-group">
+              <legend>Terms and conditions</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="terms"
+                  value="termsAccepted"
+                  required
+                />I accept terms and conditions</label
+              >
+            </fieldset>
+            <!--(yes = &#9989;, no = &#10060;)-->
+
+            <div class="form-row">
+              <button id="addRowBtn" type="submit" class="btn">Register</button>
+              <button id="clearBtn" type="reset" class="btn btn-secondary">
+                Clear
+              </button>
+            </div>
+            <!--
+            Implement a form with the following inputs:
+
+            --hidden timestamp (filled automatically),
+            --text for full name,
+            --email,
+            tel for phone number,
+            date for birth date,
+            checkbox to accept terms.
+            -->
+          </form>
+        </section>
+      </div>
+
+      <!-- Table -->
+      <div class="table-wrap">
+        <table class="table" id="timetable">
+          <thead>
+            <tr>
+              <th>Member</th>
+              <th>Reg. date</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Dob</th>
+              <th>Terms accepted</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
