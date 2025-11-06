@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Registration Page</title>
+    <title>Gandalf Fan Club - Registration Page</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
   </head>
@@ -14,7 +14,7 @@
     -->
 
     <header class="site-header">
-      <h1>Registration page</h1>
+      <h1>Gandalf fan club - registration page</h1>
     </header>
 
     <main class="content">
@@ -46,6 +46,8 @@
                 type="text"
                 required
                 placeholder="e.g., John Doe"
+                oninvalid="this.setCustomValidity('A name, traveler, you must provide. None may pass unnamed!')"
+                oninput="this.setCustomValidity('')"
               />
             </div>
             <!--  email  -->
@@ -58,6 +60,8 @@
                 pattern="[^ @]*@[^ @]*"
                 required
                 placeholder="john.doe@email.com"
+                oninvalid="this.setCustomValidity('Even the wisest cannot contact you without an address. Enter your email, you must.')"
+                oninput="this.setCustomValidity('')"
               />
             </div>
             <!--  phone  -->
@@ -69,13 +73,22 @@
                 type="tel"
                 required
                 placeholder="+358 40 1234567"
+                oninvalid="this.setCustomValidity('Speak your number, that we may reach you across distant lands.')"
+                oninput="this.setCustomValidity('')"
               />
             </div>
 
             <!--  birth-->
             <div class="form-row">
               <label for="birthDate">Date of birth</label>
-              <input id="birthDate" name="birthDate" type="date" required />
+              <input
+                id="birthDate"
+                name="birthDate"
+                type="date"
+                required
+                oninvalid="this.setCustomValidity('Reveal the day you first drew breath, lest time forget your coming.')"
+                oninput="this.setCustomValidity('')"
+              />
             </div>
 
             <!--  terms and conditions  -->
@@ -86,6 +99,8 @@
                   type="checkbox"
                   name="terms"
                   value="termsAccepted"
+                  oninvalid="this.setCustomValidity('By the laws of this realm, you must accept the terms before you proceed.')"
+                  oninput="this.setCustomValidity('')"
                   required
                 />I accept terms and conditions</label
               >
