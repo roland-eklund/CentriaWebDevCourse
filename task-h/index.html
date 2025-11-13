@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gandalf Fan Club - Registration Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
+  </head>
+  <!--
+    Author: Roland Eklund
+    Date: 2025-11-13
+    -->
+
+  <body class="bg-slate-100">
+    <header class="bg-teal-800 text-white py-8">
+      <h1 class="text-2xl font-semibold text-center">
+        Gandalf fan club - registration page
+      </h1>
+    </header>
+
+    <main class="mx-auto max-w-6xl">
+      <!-- Top row split into two blocks -->
+      <div class="flex flex-row gap-8 m-8">
+        <!-- Student info (30%) -->
+        <section
+          class="bg-white border border-gray-200 rounded-md p-8 lg:w-1/3"
+          aria-label="Student information"
+        >
+          <h2 class="text-lg font-medium text-slate-700">Latest added:</h2>
+          <p><span class="student-name">Name</span></p>
+          <p><span class="student-date">Date</span></p>
+          <p><span class="student-email">Email</span></p>
+          <p><span class="student-phone">Phone</span></p>
+          <p><span class="student-dob">Date of Birth</span></p>
+        </section>
+
+        <!-- Controls (70%): add course + day marks -->
+        <section
+          class="bg-white border border-gray-200 rounded-md p-6 lg:w-full"
+          aria-label="Add course row"
+        >
+          <h2 class="text-lg font-medium text-slate-700">Register here:</h2>
+
+          <form id="registrationForm">
+            <!--  Timestamp  -->
+            <input type="hidden" id="timestamp" name="timestamp" />
+            <!--  name  -->
+            <div class="form-row">
+              <label for="nameField">Name</label>
+              <input
+                class="border rounded"
+                id="nameField"
+                name="nameField"
+                type="text"
+                required
+                placeholder="e.g., John Doe"
+                oninvalid="this.setCustomValidity('A name, traveler, you must provide. None may pass unnamed!')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <!--  email  -->
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                class="border rounded"
+                id="email"
+                name="email"
+                type="email"
+                pattern="[^ @]*@[^ @]*"
+                required
+                placeholder="john.doe@email.com"
+                oninvalid="this.setCustomValidity('Even the wisest cannot contact you without an address. Enter your email, you must.')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <!--  phone  -->
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input
+                class="border rounded"
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="+358 40 1234567"
+                oninvalid="this.setCustomValidity('Speak your number, that we may reach you across distant lands.')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+
+            <!--  birth-->
+            <div class="form-row">
+              <label for="birthDate">Date of birth</label>
+              <input
+                class="border rounded px-1 mx-auto text-slate-400"
+                id="birthDate"
+                name="birthDate"
+                type="date"
+                required
+                oninvalid="this.setCustomValidity('Reveal the day you first drew breath, lest time forget your coming.')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+
+            <!--  terms and conditions  -->
+            <fieldset class="border rounded px-2">
+              <legend class="font-semibold">Terms and conditions</legend>
+              <label
+                ><input
+                  class="mx-1"
+                  type="checkbox"
+                  name="terms"
+                  value="termsAccepted"
+                  oninvalid="this.setCustomValidity('By the laws of this realm, you must accept the terms before you proceed.')"
+                  oninput="this.setCustomValidity('')"
+                  required
+                />I accept terms and conditions</label
+              >
+            </fieldset>
+            <!--(yes = &#9989;, no = &#10060;)-->
+
+            <div class="form-row">
+              <button
+                id="addRowBtn"
+                type="submit"
+                class="text-white bg-blue-500 border rounded px-4 my-4 mx-3"
+              >
+                Register
+              </button>
+              <button
+                id="clearBtn"
+                type="reset"
+                class="border rounded px-4 my-4"
+              >
+                Clear
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- Table -->
+      <div class="bg-white border rounded p-8 m-8 overflow-x-auto">
+        <table class="min-w-full table-auto" id="timetable">
+          <thead class="bg-teal-600 text-white">
+            <tr>
+              <th class="text-left p-4">Member</th>
+              <th class="text-left p-4">Reg. date</th>
+              <th class="text-left p-4">Email</th>
+              <th class="text-left p-4">Phone</th>
+              <th class="text-left p-4">Dob</th>
+              <th class="text-left p-4">Terms accepted</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-center"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

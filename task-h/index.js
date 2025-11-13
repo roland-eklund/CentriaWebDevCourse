@@ -1,6 +1,6 @@
 // index.js
 // Author: Roland Eklund
-// Date: 2025-11-05
+// Date: 2025-11-13
 
 document.addEventListener('DOMContentLoaded', () => {
   const CHECK = '✅';
@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (timestampInput) timestampInput.value = iso;
 
-    // build table row according to your table headers:
-    // Member | Reg. date | Email | Phone | Dob | Terms accepted
     const row = document.createElement('tr');
 
     const tdName = document.createElement('td');
@@ -80,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tableBody.appendChild(row);
 
-    // update student-info section if present
     const studentNameSpan = document.querySelector('.student-name');
     const studentDateSpan = document.querySelector('.student-date');
     const studentEmailSpan = document.querySelector('.student-email');
