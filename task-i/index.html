@@ -11,11 +11,11 @@
       content="The only rental service for tools so ridiculously manly they come with their own beard oil."
     />
 
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -26,19 +26,23 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="container">
+    <section class="hero" role="banner" aria-label="Hero">
+      <div class="container hero-inner">
         <h1>OVERLY MANLY<br />MANTOOLS</h1>
         <h2>Tools so manly they grow beards on their own</h2>
-        <p>99% of men cannot handle these tools. Are you the 1%?</p>
+        <p class="lead">
+          99% of men cannot handle these tools. Are you the 1%?
+        </p>
         <a href="#catalog" class="btn">Prove Your Manliness</a>
       </div>
     </section>
 
     <section class="about">
       <div class="container">
-        <h2>Welcome to the Manliest Rental Service on Earth</h2>
-        <p style="font-size: 1.5rem; max-width: 900px; margin: 2rem auto">
+        <h2 class="section-title">
+          Welcome to the Manliest Rental Service on Earth
+        </h2>
+        <p class="lead about-lead">
           We don’t rent tools. We rent
           <strong>weapons of mass construction</strong>. Every item in our fleet
           is forged from the tears of weaker tools and baptized in pure
@@ -49,16 +53,7 @@
 
     <section class="tools" id="catalog">
       <div class="container">
-        <h2
-          style="
-            text-align: center;
-            font-size: 5rem;
-            color: var(--gold);
-            margin-bottom: 3rem;
-          "
-        >
-          Featured Mantools
-        </h2>
+        <h2 class="section-title">Featured Mantools</h2>
 
         <div class="tools-grid">
           <article class="tool-card">
@@ -102,7 +97,7 @@
 
     <section class="features">
       <div class="container" id="why">
-        <h2 style="font-size: 5rem; color: var(--gold)">Why Rent From Us?</h2>
+        <h2 class="section-title">Why Rent From Us?</h2>
         <div class="features-grid">
           <div class="feature">
             <h3>100% Beard-Approved</h3>
@@ -126,15 +121,15 @@
 
     <section class="cta">
       <div class="container">
-        <h2>Think You Can Handle It?</h2>
-        <p style="font-size: 2rem; margin: 2rem 0">Step up, or step aside.</p>
+        <h2 class="section-title">Think You Can Handle It?</h2>
+        <p class="lead cta-lead">Step up, or step aside.</p>
         <a href="#" class="btn">Enter the Man-Zone → Full Catalog</a>
       </div>
     </section>
 
     <footer>
       <div class="container" id="footer">
-        <p style="font-size: 1.5rem">
+        <p class="footer-lead">
           © 2025 OVERLY MANLY MANTOOLS • All Rights Reserved • Est. by Men, for
           Men
         </p>
