@@ -1,0 +1,266 @@
+      :root {
+        --black: #0d0d0d;
+        --blood-red: #8b0000;
+        --dark-red: #450000;
+        --gold: #b8860b;
+        --gray: #1c1c1c;
+        --lightgray: #f0f0f0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        background: var(--black);
+        color: #fff;
+        line-height: 1.6;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+      }
+
+      header {
+        background: rgba(13, 13, 13, 0.95);
+        padding: 1.5rem 0;
+        text-align: center;
+        border-bottom: 4px solid var(--blood-red);
+      }
+      nav a {
+        color: var(--gold);
+        margin: 0 2rem;
+        font-size: 1.4rem;
+        font-weight: 900;
+      }
+
+      .hero {
+        height: 100vh;
+        min-height: 700px;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.94)),
+
+          url('./img/manlyman.png');
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 9rem;
+        color: var(--gold);
+        text-shadow: 8px 8px 0 var(--blood-red);
+        line-height: 1;
+      }
+      .hero h2 {
+        font-size: 4rem;
+        color: white;
+        margin: 1rem 0;
+      }
+      .hero p {
+        font-size: 2rem;
+        margin: 2rem 0;
+        color: var(--gold);
+      }
+      .btn {
+        display: inline-block;
+        background: var(--blood-red);
+        color: white;
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+        font-family: 'Bebas Neue', cursive;
+        border: 4px solid var(--gold);
+        border-radius: 0;
+        letter-spacing: 3px;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        background: var(--gold);
+        color: var(--black);
+        transform: scale(1.1);
+      }
+
+      section {
+        padding: 6rem 1rem;
+      }
+      .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .about {
+        background: rgba(13, 13, 13, 0.95);
+        text-align: center;
+      }
+      .about h2 {
+        font-size: 5rem;
+        color: var(--gold);
+        margin-bottom: 2rem;
+      }
+
+      /* TOOL CARDS */
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+      .tool-card {
+        background: var(--gray);
+        border: 4px solid var(--blood-red);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s;
+      }
+      .tool-card:hover {
+        transform: translateY(-20px) scale(1.03);
+      }
+      .tool-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .tool-card h3 {
+        background: var(--blood-red);
+        color: var(--gold);
+        padding: 1rem;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .tool-card p {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .manly-badge {
+        position: absolute;
+        top: 10px;
+        right: -40px;
+        background: var(--gold);
+        color: black;
+        padding: 10px 60px;
+        font-size: 1.3rem;
+        font-weight: 900;
+        transform: rotate(45deg);
+      }
+
+      .catalog-card {
+        background: var(--gray);
+        border: 4px solid var(--blood-red);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s;
+      }
+      .catalog-card:hover {
+        transform: translateY(-20px) scale(1.03);
+      }
+      .catalog-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .catalog-card h3 {
+        background: var(--blood-red);
+        color: var(--gold);
+        padding: 1rem;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .catalog-card .specs {
+        list-style: disc;
+        list-style-position: inside;
+        padding: 1.5rem;
+        font-size: 1rem;
+      }
+      .catalog-card .specs li {
+        font-weight: bold;
+      }
+
+      .catalog-card .price {
+  margin-top: 0.6rem;
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+
+      .features {
+        background: rgba(20, 0, 0, 0.95);
+        text-align: center;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .feature {
+        background: var(--dark-red);
+        padding: 3rem 1.5rem;
+        border: 3px solid var(--gold);
+      }
+      .feature h3 {
+        font-size: 3rem;
+        color: var(--gold);
+      }
+
+      .cta {
+        background: linear-gradient(135deg, var(--blood-red), var(--dark-red));
+        text-align: center;
+        padding: 8rem 1rem;
+      }
+      .cta h2 {
+        font-size: 6rem;
+      }
+
+      footer {
+        background: var(--black);
+        padding: 3rem 0;
+        text-align: center;
+        border-top: 6px solid var(--gold);
+      }
+      .container > img[src$="example.jpg"] {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;  
+  margin-top: 30px; 
+}
+
+
+      @media (max-width: 992px) {
+        .hero h1 {
+          font-size: 6rem;
+        }
+        .hero h2 {
+          font-size: 3rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 4.5rem;
+        }
+        .hero h2 {
+          font-size: 2.5rem;
+        }
+        .hero p {
+          font-size: 1.5rem;
+        }
+        nav a {
+          display: block;
+          margin: 1rem 0;
+        }
+      }
